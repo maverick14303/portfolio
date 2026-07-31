@@ -1,0 +1,46 @@
+HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: TATAMOTORS.NS"}}}
+$TATAMOTORS.NS: possibly delisted; no price data found  (period=6mo) (Yahoo error = "No data found, symbol may be delisted")
+=== Recent signals (last 15 of 290, 1-day horizon) ===
+date        symbol           sent   move%  hit  headline
+2026-07-02  SBIN.NS         +0.40   -1.10  no   EVs Could Save India Rs 1 Lakh Crore In Oil Imports By 
+2026-07-02  SBIN.NS         +0.96   -1.10  no   India's EV boom could save Rs 1 lakh crore in oil impor
+2026-07-02  TCS.NS          +0.51   +1.23  YES  Nifty IT jumps over 4%; Infosys, TCS shares surge up to
+2026-07-02  TCS.NS          +0.64   +1.23  YES  Massive Placement Boost: TCS Hires 1,500+ Students From
+2026-07-02  TCS.NS          +0.93   +1.23  YES  Sensex Today | Stock Market LIVE Updates: Nifty IT rise
+2026-07-02  TCS.NS          +0.94   +1.23  YES  Top Gainers &amp; Losers on 2 July: Zensar Tech, TCS, C
+2026-07-02  TMPV.NS         +0.90   -0.53  no   June auto sales data: Commercial vehicle turns consensu
+2026-07-02  ULTRACEMCO.NS   +0.84   +1.62  YES  Bernstein upgrades this cement stock to 'Outperform' in
+2026-07-02  VEDL.NS         -0.30   +1.56  no   This demerged Vedanta entity is up 100% in 12 days of l
+2026-07-02  VEDL.NS         +0.30   +1.56  YES  Vedanta Oil & Gas zooms 40% in 2 days; should you buy, 
+2026-07-02  VEDL.NS         +0.40   +1.56  YES  Adani takes on Birla, Vedanta with $11.5 billion alumin
+2026-07-02  VEDL.NS         +0.74   +1.56  YES  Vedanta Aluminium Metal gains after brokerage initiates
+2026-07-02  VEDL.NS         +0.87   +1.56  YES  Vedanta Aluminium up 4% after Emkay starts coverage wit
+2026-07-02  VEDL.NS         +0.92   +1.56  YES  Vedanta Iron and Steel shares rocket 113% in 13 session
+2026-07-02  WIPRO.NS        +0.44   +1.20  YES  Buy, Sell Or Hold: L&T, Wipro, RIL, Vikram Solar, Zee E
+
+=== Hit rate by horizon (vs always-bull baseline) ===
+horizon        n    hit%   ±95%  baseline   verdict
+1d           290    60.0    5.6      62.8   no edge
+3d           290    62.1    5.6      70.3   no edge
+5d           290    50.3    5.8      53.8   no edge
+(EDGE? only when the whole confidence range clears the baseline)
+
+=== By source (1-day) ===
+  CNBC TV18 Markets              25/56 (45%)
+  News18 Business                28/48 (58%)
+  Economic Times Markets         24/37 (65%)
+  BusinessLine Markets           12/19 (63%)
+  Economic Times Industry        13/18 (72%)
+  Business Standard Markets      15/18 (83%)
+  BusinessLine Companies         8/16 (50%)
+  The Hindu Business             6/14 (43%)
+  LiveMint Markets               10/13 (77%)
+  The Hindu Economy              6/9 (67%)
+
+=== VADER vs LLM analyst (same articles, 1-day) ===
+  VADER  20/32 (62%)
+  LLM    2/4 (50%)
+
+=== ✅ verdict journal (5-day outcomes) ===
+  2026-07-02  COALINDIA.NS     -2.05%  Coal India's SECL strengthens monsoon measures for
+  → 0/1 positive, avg -2.05%

@@ -1,0 +1,110 @@
+{
+  "shipped": [
+    {
+      "slug": "sunday-agent",
+      "name": "SUNDAY — Job-Hunt Agent",
+      "tagline": "An agent that hunts jobs while I sleep.",
+      "description": "Every morning at 10:00 IST it scrapes AI/ML intern and fresher openings, ranks them against my real resume, builds ATS-safe resume and per-company cover-letter PDFs, and emails me the top five. I reply with a company name — it applies. It never emails the same company twice.",
+      "stack": ["Vercel Serverless", "Node.js", "Supabase", "Gmail SMTP/IMAP", "cron"],
+      "links": [{ "label": "GitHub", "url": "https://github.com/maverick14303/sunday_find_me_a_job" }],
+      "note": "Runs live for me daily — the deployment stays private (it holds my resume data).",
+      "featured": true,
+      "status": "shipped"
+    },
+    {
+      "slug": "whisperflow-local",
+      "name": "WhisperFlow Local",
+      "tagline": "Fully offline dictation for Windows — hold a key, speak, done.",
+      "description": "Hold a global hotkey and talk; your words appear at the cursor in whatever app is focused. Silero VAD gates the mic, faster-whisper transcribes on CPU (int8), and a local Ollama model polishes the text. No cloud anywhere in the pipeline — about 1.5 s end-to-end on an i5 laptop with no GPU.",
+      "stack": ["Python", "faster-whisper", "Silero VAD", "Ollama", "CTranslate2"],
+      "links": [],
+      "note": "",
+      "featured": true,
+      "status": "shipped"
+    },
+    {
+      "slug": "nse-swing-bot",
+      "name": "NSE Swing-Trading Bot",
+      "tagline": "Real money, hard caps, honest gates.",
+      "description": "An automated swing trader for Indian equities, capped at ₹1,000 of real capital. It goes live only through backtest → paper → live gates. Dual-broker architecture: Upstox's free API feeds market data while Zerodha executes with ₹0 delivery brokerage. Reports every move to Telegram.",
+      "stack": ["Python", "Upstox API", "Zerodha Kite", "GitHub Actions", "Telegram"],
+      "links": [{ "label": "GitHub", "url": "https://github.com/maverick14303/nse-swing-bot" }],
+      "note": "",
+      "featured": false,
+      "status": "shipped"
+    },
+    {
+      "slug": "stock-news-monitor",
+      "name": "Stock News Monitor",
+      "tagline": "A news-sentiment system that grades its own predictions.",
+      "description": "Scrapes trusted Indian financial feeds, matches headlines to NSE tickers, and scores sentiment — then checks itself against what each stock actually did the next trading day. An autonomous ₹5,000 paper trader learns source trust and sector weights from its own wins and losses.",
+      "stack": ["Python", "SQLite", "VADER", "Yahoo Finance"],
+      "links": [{ "label": "GitHub", "url": "https://github.com/maverick14303/stock-news-monitor" }],
+      "note": "",
+      "featured": false,
+      "status": "shipped"
+    },
+    {
+      "slug": "interview-strategy",
+      "name": "Sunday: Interview Strategy",
+      "tagline": "The layer above LeetCode — which company asks what, in which round.",
+      "description": "A placement-prep platform mapping companies → interview rounds → real questions, with topic mastery tracking, per-company readiness scores, and next-best-action suggestions. Built single-user and PIN-gated by design.",
+      "stack": ["Next.js", "Tailwind v4", "Supabase Postgres", "Vercel"],
+      "links": [],
+      "note": "Private build — it holds my actual prep state.",
+      "featured": false,
+      "status": "shipped"
+    },
+    {
+      "slug": "chief-of-staff",
+      "name": "Chief of Staff",
+      "tagline": "A Telegram chief of staff with zero authority.",
+      "description": "Morning briefing in, prioritized checklist out; an evening check-in closes the loop. It tracks an 8-8-8 time budget across personal, professional, and social hours — and nags exactly once. The bot structures; I decide.",
+      "stack": ["Cloudflare Workers", "TypeScript", "Telegram Bot API", "Supabase"],
+      "links": [],
+      "note": "",
+      "featured": false,
+      "status": "in-progress"
+    },
+    {
+      "slug": "mun-prep",
+      "name": "MUN Prep Platform",
+      "tagline": "Evidence-backed Model UN dossiers with live-verified citations.",
+      "description": "Takes a committee, country, and agenda, and produces a complete delegate dossier — country profile, position paper, speeches, resolution clauses — where every claim traces to a fetched and verified source. Official documents labelled primary; reputable secondary sources labelled as such.",
+      "stack": ["Claude Code", "Agentic research", "docx pipeline"],
+      "links": [],
+      "note": "",
+      "featured": false,
+      "status": "shipped"
+    },
+    {
+      "slug": "stealth",
+      "name": "Stealth project",
+      "tagline": "Computer-vision SaaS in development.",
+      "description": "Under wraps for now.",
+      "stack": [],
+      "links": [],
+      "note": "",
+      "featured": false,
+      "status": "stealth"
+    }
+  ],
+  "upcoming": [
+    {
+      "slug": "codelens",
+      "name": "CodeLens",
+      "tagline": "See your code think.",
+      "description": "Write DSA code and watch it execute live — memory, stack frames, heap objects, pointer arrows, recursion trees — animating as you type. One language-agnostic trace engine drives every panel; Python, C++, and Java plug into it. Reverse execution comes free: the whole run is a scrubbable timeline.",
+      "meta": "Designed in full · build starts next",
+      "stack": ["React", "TypeScript", "Monaco", "Pyodide", "WASM"]
+    },
+    {
+      "slug": "ecg-interpreter",
+      "name": "ECG Interpreter",
+      "tagline": "Deep learning on 12-lead ECGs — explained honestly.",
+      "description": "A 1D-CNN/ResNet trained on PTB-XL to flag cardiac abnormality classes, paired with deterministic signal features (intervals, rhythm, axis) and a grounded explanation layer that can only say what the classifier and measurements support. Educational tool — never a medical device, and it says so on every screen.",
+      "meta": "Planned · PTB-XL · Kaggle GPUs",
+      "stack": ["PyTorch", "wfdb", "neurokit2", "RAG"]
+    }
+  ]
+}

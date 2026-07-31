@@ -1,0 +1,18 @@
+=== Backtest sweep: 24 strategies, 8.9 years, NSE ===
+
+strategy                CAGR%  Sharpe  maxDD% trades  win%
+mom_12-1_monthly         50.9    1.32   -48.4     76  59.2
+mom_3m_monthly           46.6    1.18   -61.3    137  59.1
+mom_6m_monthly_trend     40.0    1.04   -58.8     98  52.0
+mom_6m_monthly           39.2    1.03   -57.0    100  51.0
+mom_6m_weekly            39.5    1.03   -66.8    221  42.1
+ma20>100_mom6_monthly    38.9    1.03   -59.0    108  50.9
+donchian_55_20           24.1    0.89   -48.1    116  41.4
+52w_high_monthly         23.0    0.88   -40.0    194  56.2
+mom_12-1_monthly         27.7    0.87   -64.3     86  44.2
+volmom_6m_monthly        24.7    0.79   -61.2    121  54.5
+mom_6m_monthly_trend     17.9    0.63   -76.5     94  31.9
+
+best by Sharpe: mom_12-1_monthly
+gate sequence : backtest -> paper -> live
+live capital  : capped at Rs 1,000

@@ -1,0 +1,45 @@
+{
+  "news": {
+    "hitRate": 55.0,
+    "signals": 171,
+    "articles": 2184,
+    "days": 11,
+    "sources": [
+      {
+        "name": "Economic Times Indus",
+        "rate": 100.0,
+        "n": 8
+      },
+      {
+        "name": "The Hindu Economy",
+        "rate": 66.7,
+        "n": 9
+      },
+      {
+        "name": "BusinessLine",
+        "rate": 66.7,
+        "n": 9
+      },
+      {
+        "name": "News18 Business",
+        "rate": 63.0,
+        "n": 54
+      },
+      {
+        "name": "The Hindu Business",
+        "rate": 50.0,
+        "n": 12
+      }
+    ]
+  },
+  "bot": {
+    "strategy": "mom_12-1_monthly",
+    "cagr": 50.86,
+    "sharpe": 1.32,
+    "maxDD": -48.4,
+    "trades": 76,
+    "winRate": 59.2,
+    "years": 8.9,
+    "strategies": 24
+  }
+}

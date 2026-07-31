@@ -1,0 +1,180 @@
+@import "tailwindcss";
+
+/* `inline` is required here: the --font-* entries reference the next/font
+   variables, which plain @theme cannot resolve at build time (it breaks the
+   whole stylesheet). Section retheming is therefore done with explicit rules
+   under `.on-light` rather than by overriding these variables. */
+@theme inline {
+  --color-void: #05070d;
+  --color-panel: #0a0f1a;
+  --color-raise: #0e1522;
+  --color-line: #1a2334;
+  --color-ink: #e9eef8;
+  --color-dim: #8d99ad;
+  --color-faint: #5b6779;
+  --color-signal: #6ee7f2;
+  --color-ember: #f2b263;
+
+  --font-display: var(--font-bricolage);
+  --font-sans: var(--font-instrument);
+  --font-mono: var(--font-plex);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+body {
+  background: var(--color-void);
+  color: var(--color-ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(110, 231, 242, 0.25);
+  color: #f2f6fd;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-signal);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Film grain — one fixed overlay unifying photos + dark surfaces */
+.grain::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='256' height='256' viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 256px 256px;
+  background-repeat: repeat;
+  opacity: 0.05;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Light surface — the reel flips to a bright section for the work.
+   Scoped to .on-light so the same components work on either theme. */
+.on-light {
+  background: #eef1f6;
+  color: #0b0f17;
+}
+
+/* Tailwind's color utilities are inlined literals, so remap them by name. */
+.on-light .text-ink { color: #0b0f17; }
+.on-light .text-dim { color: #4d5871; }
+.on-light .text-faint { color: #7c88a0; }
+.on-light .border-line { border-color: #d3dae6; }
+.on-light .bg-panel { background-color: #ffffff; }
+.on-light .bg-raise\/60 { background-color: rgba(255, 255, 255, 0.7); }
+.on-light .text-ink\/85 { color: rgba(11, 15, 23, 0.85); }
+.on-light .text-ink\/90 { color: rgba(11, 15, 23, 0.9); }
+.on-light .bg-line { background-color: #cfd7e4; }
+
+.on-light .path-label,
+.on-light .text-signal,
+.on-light .text-signal\/90,
+.on-light .text-signal\/80,
+.on-light .text-signal\/70 {
+  color: #16707d;
+}
+
+.on-light .bg-signal { background-color: #16707d; }
+.on-light .text-ember { color: #a86a12; }
+
+/* Cards read as objects on a light surface, so give them real elevation. */
+.on-light .shadow-2xl {
+  --tw-shadow-color: rgba(15, 23, 42, 0.18);
+}
+
+/* Giant slam-dunk name — behind layer + clipped front slice */
+.giant-name {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 800;
+  font-size: clamp(6.5rem, 21vw, 19rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  text-align: center;
+  white-space: nowrap;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(110, 231, 242, 0.14);
+  user-select: none;
+}
+
+.giant-name--front {
+  -webkit-text-stroke: 1.5px rgba(110, 231, 242, 0.32);
+  color: rgba(5, 7, 13, 0.38);
+}
+
+/* Shine sweep on primary buttons */
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shine::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 42%, rgba(255, 255, 255, 0.5) 50%, transparent 58%);
+  transform: translateX(-130%);
+  transition: transform 0.7s ease;
+  pointer-events: none;
+}
+
+.btn-shine:hover::after,
+.btn-shine:focus-visible::after {
+  transform: translateX(130%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-shine::after {
+    display: none;
+  }
+}
+
+/* Marquee ticker */
+.marquee-track {
+  animation: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
+/* Terminal-path eyebrow used by every section heading */
+.path-label {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  color: var(--color-signal);
+}
+
+.path-label::before {
+  content: "~/";
+  color: var(--color-faint);
+}

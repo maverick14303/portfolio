@@ -1,0 +1,48 @@
+{
+  "name": "Ankit Keshari",
+  "shortName": "Ankit",
+  "role": "AI builder",
+  "location": "New Delhi, India",
+  "hero": {
+    "eyebrow": "ankit-keshari",
+    "headline": "I build AI systems that ship.",
+    "subline": "Agents, ML pipelines, and local-first tools that actually run.",
+    "meta": "AI Intern @ EY · B.Tech + AI/ML minor, NIT Delhi '27",
+    "status": "Open to internships & freelance AI work",
+    "ctaPrimary": { "label": "See projects", "href": "#projects" },
+    "ctaSecondary": { "label": "Get in touch", "href": "#contact" }
+  },
+  "about": {
+    "bio": [
+      "I'm Ankit — a mechanical engineering student at NIT Delhi who fell down the AI rabbit hole and never climbed back out. Most days I'm building agents and ML systems: a job-hunt agent that applies while I sleep, a fully offline dictation app, trading bots that grade their own predictions against the market.",
+      "I care about two things: tools that actually ship, and numbers that are actually real. Every project here runs on measured results — hit rates, latencies, accuracy against expert baselines — never vibes.",
+      "Off-screen: badminton, lawn tennis, volleyball, and finding new places to travel."
+    ],
+    "facts": [
+      { "label": "Education", "value": "B.Tech Mechanical Engineering, Minor in AI & ML — NIT Delhi, 2023–2027" },
+      { "label": "Responsibility", "value": "Database Sector Head, Training & Placement Cell, NIT Delhi (Coordinator 2023–25)" },
+      { "label": "Currently", "value": "DSA in Java, daily — plus an Obsidian second brain that runs my life" }
+    ]
+  },
+  "skills": [
+    { "group": "Languages", "items": ["Python", "Java", "C", "MATLAB"] },
+    { "group": "ML & Data", "items": ["PyTorch", "TensorFlow", "Scikit-learn", "DeepFace", "NumPy", "Pandas"] },
+    { "group": "Core", "items": ["Adversarial ML", "Regression Modeling", "Data Structures & Algorithms"] },
+    { "group": "Shipping with", "items": ["Next.js", "TypeScript", "Supabase", "FastAPI", "Cloudflare Workers", "Ollama", "faster-whisper", "Three.js"] },
+    { "group": "Tools", "items": ["Claude Code", "Jupyter", "Figma", "Canva"] }
+  ],
+  "contact": {
+    "email": "ankitkeshari326@gmail.com",
+    "github": "https://github.com/maverick14303",
+    "linkedin": "https://www.linkedin.com/in/ankit-keshari-105846255/",
+    "resume": "/resume.pdf",
+    "line": "Recruiting, freelance AI work, or just an idea worth building — my inbox is open."
+  },
+  "nav": [
+    { "label": "Projects", "href": "#projects" },
+    { "label": "Experience", "href": "#experience" },
+    { "label": "Next", "href": "#next" },
+    { "label": "About", "href": "#about" },
+    { "label": "Contact", "href": "#contact" }
+  ]
+}
