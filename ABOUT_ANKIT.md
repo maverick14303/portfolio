@@ -7,7 +7,7 @@
 > I build AI systems that ship.
 > Agents, ML pipelines, and local-first tools that actually run.
 
-**Meta:** AI Intern @ EY · B.Tech + AI/ML minor, NIT Delhi '27
+**Meta:** Ex-AI Intern @ EY · B.Tech + AI/ML minor, NIT Delhi '27
 
 ---
 
@@ -40,15 +40,15 @@ Off-screen: badminton, lawn tennis, volleyball, and finding new places to travel
 ## Experience
 
 ### EY — AI Intern
-**Jun 2026 — Present** (current)
+**Jun — Jul 2026**
 
 Building an LLM-powered document-intelligence platform for a government client — end to end, from scanned PDFs to defensible scores.
 
 - OCR pipeline for scanned official journals: PyMuPDF page rendering + vision-model transcription, cached so no document is read twice.
 - Rubric-driven LLM scoring that quotes its evidence — every score carries the exact line in the source document it came from.
-- Evaluated against 136 expert-rated products: exact-match and within-one accuracy tracked per parameter to pick the best model.
+- Built against an expert-rated reference set of 136 products. The pilot ran end to end on four; on the first, exact-match and within-one agreement with the experts was measured per parameter.
 
-**Stack:** FastAPI, PostgreSQL + pgvector, LlamaIndex, Gemini Vision, Next.js
+**Stack:** Python, PyMuPDF, OpenAI SDK against Gemini and OpenRouter models, Pydantic, openpyxl
 
 ### DRDO — Scientific Analysis Group (SAG), Delhi — Research Intern, Adversarial Machine Learning
 **May — Jul 2025**
